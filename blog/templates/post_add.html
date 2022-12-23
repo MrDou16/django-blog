@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Create a New Post</title>
+        <style type="text/css">
+            body {
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            }
+            h1 {
+                font-size: 18px;
+                font-weight: bold;
+                text-align: center;
+            }
+            form {
+                width: 500px;
+                margin: 0 auto;
+                border: 1px solid #ccc;
+                padding: 20px;
+                background-color: #eaeaea;
+            }
+            input[type="submit"] {
+                display: block;
+                margin: 0 auto;
+                background-color: #009688;
+                color: #ffffff;
+                padding: 8px 15px;
+                border: none;
+                font-size: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Create a New Post</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Create" />
+        </form>
+    </body>
+</html>
